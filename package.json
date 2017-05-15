@@ -1,0 +1,24 @@
+{
+  "name": "foundation-libsass-template",
+  "version": "0.0.1",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-autoprefixer": "^2.0.0",
+    "grunt-bower-concat": "^1.0.0",
+    "grunt-browser-sync": "^1.5.3",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-imagemin": "^1.0.1",
+    "grunt-contrib-uglify": "^2.3.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-inline": "^0.3.6",
+    "grunt-sass": "^2.0.0",
+    "imagemin-mozjpeg": "^6.0.0",
+    "node-bourbon": "^1.2.3",
+    "node-sass": "~0.9.3"
+  },
+  "scripts": {
+    "build": "grunt build",
+    "deploy": "grunt build && surge ./build"
+  }
+}

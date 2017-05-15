@@ -1,0 +1,381 @@
+//Set Baseline for REM
+
+figure { margin:0; }
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select { border-radius:4px; }
+
+//Headings
+h1, h2, h3 {
+  color: $primary-color;
+  font-weight: bold;
+}
+
+h1, h2 { margin: 0; }
+
+h1 {
+  @include animation(fadeIn 1.0s ease);
+  font-family: $font-family-sans-serif;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, .2);
+  @media #{$small-only} { font-size:200% !important; }
+}
+
+h2 { padding-bottom:1em; }
+
+h4, h5 {
+  font-family:$font-family-sans-serif;
+  color: $oil;
+  font-weight:bold;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+hr {
+  border: 1px solid $primary-color;
+  display: inline-block;
+  margin-top: 10px;
+  padding: 0;
+  width: 2.5rem;
+}
+
+p { font-size: 14px; }
+
+footer {
+  background-color: $oil;
+  // border-bottom: 4px solid $primary-color;
+  // padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  p, li a { color:#fff; }
+
+  li {
+    font-style:italic;
+    list-style:none;
+  }
+
+  h4 {
+    color: #fff;
+  }
+}
+
+.button{
+  font-weight:bold;
+  text-transform:uppercase;
+}
+
+.logo {
+  max-width:320px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, .3);
+  margin-bottom: 1rem;
+  @media #{$large-only} { margin-bottom: 0; }
+}
+
+.nav {
+  padding: 30px 0;
+}
+
+.phone-number {
+  color: $oil;
+  position: relative;
+  font-weight:bold;
+  top: 8px;
+}
+
+.section-heading{
+  padding-bottom:2rem;
+}
+
+.section-sub {
+  color: $oil;
+  font-size: 24px;
+}
+
+// Section Specific Styles
+.hero-section{
+  @include background-image(linear-gradient( rgba(28,54,94,.8) 0, rgba(28,54,94,.2) 100%),url("../images/cover.jpg"));
+  background-size:cover;
+  margin-bottom:1rem;
+  min-height:500px;
+}
+
+.sub-heading {
+  font-weight: 400;
+  font-family: $font-family-serif;
+}
+
+.copy-block{
+  padding-top:4rem;
+  padding-bottom:2rem;
+
+  a {
+    color:white;
+    text-transform:uppercase;
+    height:100%;
+
+    &:hover{ color:$primary-color; }
+  }
+}
+
+.play-icon{
+  overflow: visible;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, .3);
+  display: flex;
+  align-items: center;
+
+  i {
+    color: white;
+    margin-right: 30px;
+  }
+
+  &:hover {
+    i, a {
+      color: $primary-color;
+    }
+  }
+}
+
+.distinctives { padding-top: 10px; padding-bottom: 40px; }
+
+.card {
+  background-color:$silver;
+  background-size:cover;
+  background-position:center;
+  margin-bottom: 1rem;
+  height: 120px;
+  overflow:hidden;
+  padding-top:40px;
+  -webkit-font-smoothing: subpixel-antialiased;
+
+  h4 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size:24px;
+    font-family: $font-family-sans-serif;
+    color: #fff;
+    @include transition (all .25s ease);
+    -ms-transition: all .25s ease;
+  }
+
+  p {
+    color:white;
+    opacity:0;
+    text-align:center;
+    @include transition (all .25s ease);
+    -ms-transition: all .45s ease;
+  }
+
+  &:hover h4{
+    @include transform(translateY(-10px));
+    @include transition (all .25s ease);
+    -ms-transition: all .25s ease;
+  }
+
+  &:hover p {
+    opacity:1;
+    @include transform(translateY(-15px));
+    @include transition (all .25s ease);
+    -ms-transition: all .45s ease;
+  }
+}
+
+.library {
+  @include background-image(
+    linear-gradient(
+      rgba(28,54,94,0) 0,
+      rgba(28,54,94,.6) 100%
+    ),
+    url("../images/library.jpg")
+  );
+}
+
+.faculty {
+  @include background-image(
+    linear-gradient(
+      rgba(28,54,94,0) 0,
+      rgba(28,54,94,.6) 100%
+    ),
+    url("../images/grudem.jpg")
+  );
+}
+
+.online {
+  @include background-image(
+    linear-gradient(
+      rgba(28,54,94,0) 0,
+      rgba(28,54,94,.6) 100%
+    ),
+    url("../images/building.jpg")
+  );
+}
+
+.mentorship {
+  @include background-image(
+    linear-gradient(
+      rgba(28,54,94,0) 0,
+      rgba(28,54,94,.6) 100%
+    ),
+  url("../images/delhousaye.jpg"));
+}
+
+.footer-top {
+  @include background-image(url("http://www.ps.edu/wp-content/uploads/2017/03/footer-curve2.png"));
+  height: 80px;
+  background-size: cover;
+  background-position: top center;
+  margin-top: 40px;
+}
+
+// Form Styles
+form {
+  background-color:white;
+  box-shadow: 2px 2px 8px rgba(137, 135, 135, .8);
+  margin-bottom:2rem;
+  padding: 0 2rem;
+  position:relative;
+  top:-150px;
+  @media #{$large-only} { margin-bottom:-100px; }
+  @media #{$small-only}, #{$medium-only} { top:0; }
+
+  > * {
+    &:last-child{
+      margin-bottom: 2rem;
+    }
+  }
+
+  h3 {
+    padding-top:1rem;
+    position:relative;
+    text-align:center;
+  }
+
+  p {
+    font-family: $font-family-sans-serif;
+    font-size: 14px;
+  }
+
+}
+
+.testimonial-section {
+  background-color:$silver;
+  padding-top:3rem;
+
+  p {
+    font-size:14px;
+    margin-bottom:0;
+  }
+}
+
+.scholarship-section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  h6 { margin-bottom: 2rem; }
+}
+
+//Media Object
+.media { margin-bottom:1rem; }
+.media, .bd {
+  overflow:hidden;
+   _overflow:visible;
+  zoom:1;
+}
+
+.media .img {
+  float:left;
+  margin-right: 20px;
+}
+
+.media .img img {
+  border-radius:50%;
+  display:block;
+  height:auto;
+  position:relative;
+  top:15px;
+  width:100%;
+  max-width:100px;
+}
+
+.media .imgExt {
+  float:right;
+  margin-left: 10px;
+}
+
+.testimonials {
+  padding-bottom:3rem;
+
+  p{
+    padding-bottom:1em;
+  }
+}
+
+.student-quote {
+  display:inline-block;
+}
+
+.collage {
+  background: url('../images/collage.jpg') no-repeat center;
+  // @include background-image(linear-gradient( rgba(0,0,0,0) 0, rgba(0,0,0,.4) 100%),url("../images/collage.jpg"));
+  background-size:cover;
+  min-height:300px;
+}
+
+.callout-section {
+  background-color:$silver;
+  padding-top:2em;
+  padding-bottom:.75rem;
+
+  h2 {
+    padding:0;
+    margin-bottom: 1rem;
+  }
+}
+
+//Video Embeds
+.embed-container
+{
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+}
+.embed-container iframe,
+.embed-container object,
+.embed-container embed
+{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.why-section {
+  padding-top:2rem;
+  padding-bottom:2rem;
+
+  li {
+    list-style-image: url('../images/check.svg');
+    margin-bottom:1em;
+  }
+}
+//Response Styles
+#submit-button.sending{ background-color:#2161D3; }
+#submit-button.sent{ background-color:#21D370; }
+#submit-button.error{ background-color:#D32121; }
+
+//Helper Classes
+
+.border { border-top: 4px solid $primary-color; }
+.white { color:#fff; }
+.section-top { padding-top:1em; }
+.center { text-align: center; }
+.rel { position: relative; }
+.v-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
